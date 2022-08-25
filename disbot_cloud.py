@@ -11,7 +11,7 @@ import keyring
 import mysql.connector
 
 db = mysql.connector.connect(
-    host= "l",
+    host= "",
     user = "",
     passwd = "",
     auth_plugin='mysql_native_password',
@@ -30,7 +30,7 @@ logger.setLevel(logging.ERROR)
 
 
 bot  = commands.Bot(command_prefix="/", intents=discord.Intents.all())
-token = "MTAwMDcwMTExMzEyMjY5NzI4Ng.GMCKc6.LmQFw0XZ-CHTagTSMXThBZOa7izWnft69lMAQ0"
+token = ""
 
 
 class abot(discord.Client):
@@ -117,13 +117,13 @@ async def new(interation: discord.Interaction, mail:str):
             OTP+=digits[math.floor(random.random()*10)]
         otp = OTP 
         msg= otp
-        Sender_Email = "verifyyourmail2324@gmail.com"
+        Sender_Email = ""
         Reciever_Email = mail
         # if "@srmist.edu.in" in mail:
         mail_ini = mail.split("@")
         nam = str(interation.user)
         
-        Password = "rnpxaawuenvyqilr"
+        Password = ""
         add_details = ("INSERT INTO mailverifier "
                 "(name_id,name, email, otp) "
                 "VALUES (%s, %s, %s, %s)")
